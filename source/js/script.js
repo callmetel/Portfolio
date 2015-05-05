@@ -26,14 +26,24 @@ $(document).ready(function(){
 
 	$('#prev').on('click', prevSlide);
 
-	if(autoswitch == true){
-		setInterval(nextSlide, autoswitch_speed)
-	}
+	// if(autoswitch === true){
+	// 	setInterval(nextSlide, autoswitch_speed)
+	// }
 
 	// Switch to next slide
 
 	function nextSlide(){
-		$('.active-slide').removeClass('active-slide').addClass('oldactive');
+		$('.active-slide')
+			.removeClass('active-slide')
+			.addClass('oldactive');
+
+		// Look into ternary operator
+		// Look into reasons to use three equal sign
+		var nextSlide = $('.active').next().length ? $('.active').next() : $('.active').get(0);
+
+
+
+
 		if($('.oldactive').is(':last-child')){
 			$('.oldactive').next().addClass('active-slide');
 			$('.slide').first().addClass('active-slide');
@@ -41,11 +51,13 @@ $(document).ready(function(){
 
 		} else {
 			$('.oldactive').next().addClass('active-slide');
-			}
+
+		
+		}
 			$('.oldactive').removeClass('oldactive');
-			$('.slide').fadeOut(speed);
-			$('.slide-copy').fadeOut(speed);
-			$('.active-slide').fadeIn(600);
+			$('.slide').fadeOut(700);
+			$('.slide-copy').fadeOut(500);
+			$('.active-slide').fadeIn(500);
 	}
 
 	function prevSlide(){
