@@ -1,0 +1,24 @@
+.work-category{
+	width:100%;
+	overflow: hidden;
+		@include media($tablet){
+			height:7.5rem;
+			text-align: center;
+		}
+		@include media($tablet-min){
+			height:12.5rem;
+		}
+		@include media($mtablet){
+			height:19.375rem;
+		}
+		@include media($ldesktop){
+			height:23.125rem;
+		}
+}
+#latest-work{
+	.content{
+		@include media($mtablet-max){
+			margin-top:1.5rem;
+		}
+	}
+}

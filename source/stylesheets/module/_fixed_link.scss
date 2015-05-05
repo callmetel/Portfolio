@@ -1,0 +1,24 @@
+#fixed-link:link{
+  position: fixed;
+  right:0;
+  margin-right: 20px;
+  top:25px;
+  color: #666;
+  font-family: $bebas-bold;
+  font-size: 1rem;
+  letter-spacing: 4px;
+  border-bottom: 4px solid rgba(248, 249, 70, 0.5);
+  display: block;
+  z-index: 1;
+  line-height: 1rem;
+  @include media($mtablet-max){
+    display: none;
+  }
+}
+#fixed-link:hover{
+  color:$link-hover-color;
+      font-family: $bebas-bold;
+      font-size: 1.125rem;
+      letter-spacing: 6px;
+      border-bottom: 7px solid rgb(248, 249, 70);
+}

@@ -1,0 +1,15 @@
+#about h1, #contact h1{
+	font-family: $bebas-bold;
+	font-size: 3rem;
+	letter-spacing: 4px;
+	border-top: 4px solid #F8F946;
+	border-bottom: 4px solid #F8F946;
+	text-align: center;
+	margin:0 auto;
+	margin-bottom: 2.5rem;
+	width:95%;
+	  font-weight: normal;
+	@include media($mobile){
+		width:90%;
+	}
+}

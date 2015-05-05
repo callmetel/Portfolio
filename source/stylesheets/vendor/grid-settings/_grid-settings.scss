@@ -1,0 +1,43 @@
+@import "../neat/neat-helpers"; // or "../neat/neat-helpers" when not in Rails
+
+// Neat Overrides
+// $column: 70px;
+// $gutter: 30px;
+// $grid-columns: 12;
+// $max-width: em(1170);
+
+// Neat Breakpoints
+//Desktop
+$large-desktop: 1280px;
+$medium-desktop: 1024px;
+
+//tablet
+$large-tablet: 980px;
+$default-tablet2: 769px;
+$default-tablet: 768px;
+$small-tablet: 680px;
+
+//mobile
+$l-mobile: 640px;
+$m-mobile: 450px;
+$small-screen: 320px;
+
+/* Desktop */
+
+$ldesktop: new-breakpoint(min-width $large-desktop);
+
+/* Tablet */
+$ltablet-min: new-breakpoint(min-width $medium-desktop);
+$ltablet: new-breakpoint(max-width $medium-desktop);
+$mtablet: new-breakpoint(min-width $large-tablet);
+$mtablet-max: new-breakpoint(max-width $large-tablet);
+$tablet-min: new-breakpoint(min-width $default-tablet2);
+$tablet: new-breakpoint(max-width $default-tablet);
+/* Mobile */
+$min-mobile: new-breakpoint(min-width $small-screen);
+
+
+$large-mobile: new-breakpoint(max-width $l-mobile);
+$medium-mobile: new-breakpoint(max-width $m-mobile);
+$mobile: new-breakpoint(max-width $small-screen);
+// $large-screen-up: new-breakpoint(min-width $large-screen 8);

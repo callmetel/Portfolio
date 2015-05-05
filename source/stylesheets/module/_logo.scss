@@ -1,0 +1,46 @@
+@import "../mixins/_keyframes.scss";
+@import "../mixins/_animations.scss";
+#heading{
+	background-image: url('../images/logo-bg.svg');
+	height:45.625rem;
+	max-height:45.625rem;
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 13rem;
+	@include media($mtablet){
+			margin-top: 50px;
+		}
+	@include media($tablet){
+		height:auto;
+		margin-top: 1rem;
+	}
+	@include media($medium-mobile){
+		padding-bottom:8rem;
+	}
+	#logo{
+		width:70%;
+		max-width: 25rem;
+		margin-bottom: 30px;
+		margin-top: 2.5rem;
+		height:70%;
+		@include media($mtablet){
+			width:80%;
+			height:80%;
+			margin-bottom: 20px;
+		}
+	}
+
+	h2{
+		font-size:$standard-size;
+		letter-spacing:  0.3125rem;
+		color: $white!important;
+		line-height: 1.563rem;
+		width: 100%;
+		margin: 0 auto;
+		opacity: 0;
+		@include media($ltablet){
+			width:80%;
+		}
+
+	}
+}

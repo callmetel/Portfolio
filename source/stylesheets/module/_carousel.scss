@@ -1,0 +1,91 @@
+#work-site .content{
+	margin-top: 20px;
+}
+#carousel{
+	@include span-columns(7);
+	border-right: 4px solid #f8f946;
+  	height: 480px;
+  	margin-right: auto;
+  	margin-left:auto;
+  	@include media($mtablet-max) {
+  		@include span-columns(12);
+  	}
+}
+#slider{
+	width:100%;
+	height:auto;
+	position: relative;
+	overflow: hidden;
+	float: left;
+	padding:3px;
+	border-radius: 5px;
+	@include media($mtablet){
+	height: 480px;	
+	}
+}
+
+#slider img{
+	width:100%;
+	height:auto;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	height:auto;
+	@include media($mtablet){
+	max-height: 480px;	
+	width:90%;
+	}
+	
+}
+
+.slide{
+	text-align: center;
+}
+
+#prev{
+	background-image: url(../images/keyboard-arrow-left.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width:40px;
+	height:40px;
+	float: left;
+	margin-top: 170px;
+	cursor: pointer;
+	position: relative;
+	z-index: 100;
+	margin-right: -45px;
+}
+
+#next{
+	background-image: url(../images/keyboard-arrow-right.svg);
+	background-size: 100%;
+	background-repeat: no-repeat;
+	width:40px;
+	height:40px;
+	float: left;
+	margin-top: 170px;
+	cursor: pointer;
+	position: relative;
+	z-index: 100;
+	margin-left: -45px;
+}
+
+#afropunk{
+	max-width: 507px;
+}
+#lookingglass{
+	max-width: 548px;
+}
+
+.site-slides img{
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	@include media($mtablet){
+	max-width: 637px;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+
+	}
+}

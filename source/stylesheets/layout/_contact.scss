@@ -1,0 +1,22 @@
+#contact{
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 6.25rem;
+	padding-bottom: 6.25rem;
+	
+	@include media($mtablet){
+		width:60%;
+	}
+	p{
+		width:48%;
+		margin-bottom: 2.5rem;
+		@include media($tablet){
+			width:80%;
+		}
+	}
+}
+
+.contact{
+	background-image: url('../images/contact-bg.svg');
+}

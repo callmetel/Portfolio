@@ -1,0 +1,18 @@
+@import "_keyframes.scss";
+.pulse{
+
+	@include animation(pulse-animation 5s linear infinite);
+	@include transform-origin(70% 70%);
+
+}
+
+.spin{
+	@include animation(spin 7s linear);
+	@include animation-delay(1s);
+}
+
+.fade-in{
+	@include animation(fadeIn 2s linear);
+	@include animation-delay(4s);
+	@include animation-fill-mode(forwards);
+}

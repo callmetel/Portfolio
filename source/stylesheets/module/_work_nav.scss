@@ -1,0 +1,26 @@
+#work-nav{
+	margin: 100px 0 auto auto;
+	li{
+		@include transition(all .65s ease);
+		color: $white;
+		font-family: $bebas-light;
+		font-size: 1.125rem;
+		letter-spacing: 5px;
+		display: inline;
+		margin-right: 10px;
+		font-weight: bold;
+	}
+	li:hover{
+		@include transition(all .65s ease);
+		color: $yellow;
+		font-family: $default;
+		font-size: 1.25rem;
+  		letter-spacing: 7px;
+	}
+	span{
+	color: $yellow;
+	}
+	@include media($mtablet-max){
+		display: none;
+	}
+}

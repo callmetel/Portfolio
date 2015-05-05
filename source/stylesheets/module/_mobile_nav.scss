@@ -1,0 +1,125 @@
+@import "../base/_variables.scss";
+@import "../vendor/grid-settings/_grid-settings.scss";
+* {
+  box-sizing: border-box;
+}
+
+header{
+  overflow: hidden;
+}
+nav {
+
+  display: block;
+  background: transparent;
+  position: relative;
+  color: white;
+  text-align: center;
+  padding-right: 15px;
+
+  .toggle-menu{
+    float:right;
+  }
+  a {
+    color: $nav-gray;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+  }
+
+  .nav-toggle{
+    display: none;
+    padding:0;
+    margin: 0 auto;
+    margin-left:15px;
+    width:100%;
+    @include media($ltablet){
+      clear:both;
+    }
+
+    li {
+      background-color: $black;
+      @include media($ltablet){
+        float: none;
+        text-align: center;
+      }
+      .zebra-stripe{
+        background-color: #222;
+      }
+      span{
+        font-size: 1.375rem;
+        color: $yellow;
+        font-family: $bebas-light;
+        letter-spacing: 1.2px;
+        display: block;
+      }
+      a{
+        font-size: 2.9rem;
+        color: $white;
+        font-family: $bebas-light;
+        letter-spacing: 1.2px;
+        line-height: 1.2;
+        font-weight: bold;
+      }
+      a:hover{
+        @include transition(all .65s ease);
+        opacity: 1;
+        border-right: $yellow 8px solid;
+      }
+
+    }
+  }
+  @include media($mtablet){
+    display: none;
+  }
+}
+
+li > label:active, li > label:focus{
+  background-color: $yellow;
+  font-family: $bebas-bold;
+}
+
+.icon-bar{
+  border-radius: 0;
+  height: 3px;
+  margin-bottom: 5px;
+  width: 25px;
+  display: block;
+}
+#bar1{
+  background-color: #f4f4f4;
+}
+
+#bar2{
+  background-color: $yellow; 
+}
+
+#bar3{
+  background-color: #d1d1d1;
+}
+input[type="checkbox"], input[type="radio"] {
+  display: none;
+}
+.dropdown-active{
+  background-color: $yellow;
+  font-family: $bebas-bold;
+  color: $black;
+}
+
+a.active{
+  border-right: $yellow 8px solid;
+  cursor: default;
+}
+
+.back-button{
+  background-image: url('../images/circle-left.svg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 35px;
+  height: 35px;
+  float: left;
+  margin: 5px;
+  margin-top: 8px;
+}
+a.contact{
+  height:5.0625rem;
+}

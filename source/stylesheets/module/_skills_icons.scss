@@ -1,0 +1,10 @@
+#skills-icons{
+	width:25%;
+	height: 25%;
+	margin-top: 20px;
+	display: block;
+	@include media($tablet){
+		width:40%;
+		height:40%;
+	}
+}
