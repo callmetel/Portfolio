@@ -12,7 +12,7 @@ $(document).ready(function(){
 	});
 
 	var speed = 500;		//fade speed
-	var autoswitch = false;		//autoslide option
+	var autoswitch = true;		//autoslide option
 	var autoswitch_speed =5000; //auto slide speed 
 	//add intiial active class
 
