@@ -16,3 +16,7 @@
 	@include animation-delay(4s);
 	@include animation-fill-mode(forwards);
 }
+
+.fadeIn-scaleUp{
+	@include animation(fadeInScale 1s linear);
+}
