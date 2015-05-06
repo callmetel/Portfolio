@@ -11,67 +11,40 @@ $(document).ready(function(){
 		$('.toggle-dropdown').toggleClass('dropdown-active');
 	});
 
-	var speed = 500;		//fade speed
 	var autoswitch = true;		//autoslide option
-	var autoswitch_speed =5000; //auto slide speed 
-	//add intiial active class
+	var autoswitch_speed =8000; //auto slide speed 
 
-	$('.slide').first().addClass('active-slide');
-	$('.slide-copy').first().addClass('active-slide');
-	$('.slide').hide();
-	$('.slide-copy').hide();
-	$('.active-slide').show();
+	$('.slide').first().addClass('is-active');
+	$('.slide-copy').first().addClass('is-active');
+	$('.slide-copy').addClass('is-inactive');
 
 	$('#next').on('click', nextSlide);
 
 	$('#prev').on('click', prevSlide);
 
-	// if(autoswitch === true){
-	// 	setInterval(nextSlide, autoswitch_speed)
-	// }
+	if(autoswitch === true){
+		setInterval(nextSlide, autoswitch_speed)
+	}
 
-	// Switch to next slide
 
 	function nextSlide(){
-		$('.active-slide')
-			.removeClass('active-slide')
-			.addClass('oldactive');
-
-		// Look into ternary operator
-		// Look into reasons to use three equal sign
-		var nextSlide = $('.active').next().length ? $('.active').next() : $('.active').get(0);
 
 
+		var $active = $('.is-active');
+		var $firstSlide = $('.slide').first();
+		var $firstSlideCopy = $('.slide-copy').first();
 
+		var next = $active.is(':last-child') ? ($active.removeClass('is-active'), $firstSlide.addClass('is-active'), $firstSlideCopy.addClass('is-active')) :  $active.removeClass('is-active').next().addClass('is-active');
 
-		if($('.oldactive').is(':last-child')){
-			$('.oldactive').next().addClass('active-slide');
-			$('.slide').first().addClass('active-slide');
-			$('.slide-copy').first().addClass('active-slide');
-
-		} else {
-			$('.oldactive').next().addClass('active-slide');
-
-		
-		}
-			$('.oldactive').removeClass('oldactive');
-			$('.slide').fadeOut(700);
-			$('.slide-copy').fadeOut(500);
-			$('.active-slide').fadeIn(500);
 	}
 
 	function prevSlide(){
-		$('.active-slide').removeClass('active-slide').addClass('oldactive');
-		if($('.oldactive').is(':first-child')){
-			$('.slide').last().addClass('active-slide');
-			$('.slide-copy').last().addClass('active-slide');
-		} else {
-			$('.oldactive').prev().addClass('active-slide');
-			}
-			$('.oldactive').removeClass('oldactive');
-			$('.slide').fadeOut(speed);
-			$('.slide-copy').fadeOut(speed);
-			$('.active-slide').fadeIn(600);
-	}
 
+		var $active = $('.is-active');
+		var $lastSlide = $('.slide').last();
+		var $lastSlideCopy = $('.slide-copy').last();
+
+		var prev = $active.is(':first-child') ? ($active.removeClass('is-active'), $lastSlide.addClass('is-active'), $lastSlideCopy.addClass('is-active')) :  $active.removeClass('is-active').prev().addClass('is-active');
+
+	}
 });
