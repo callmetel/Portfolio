@@ -54,23 +54,40 @@ $(document).ready(function(){
 	}
 
 // Home Page Fade On Scroll Anmiation
-
+	
 	$(window).scroll(function(e) {
-    var pos = $(window).scrollTop(),
-    	headHeight = $('#heading').height();
-    	aboutHeight = ($('#about').outerHeight( false )) + ($('#heading').outerHeight( false ));
 
+    var pos = $(window).scrollTop(),
+    	$heading = $('#heading'),
+    	$about = $('#about'),
+    	$contact = $('#contact'),
+    	headHeight = $heading.height(),
+    	aboutHeight = ($about.height()) + ($heading.outerHeight( false )),
+    	headAboutHeightTotal = ($about.outerHeight( true )) + ($heading.outerHeight( true )),
+    	contactHeight = (headAboutHeightTotal) - (($about.outerHeight( false ))/2);
+
+    // About Scroll Animation
     if (pos > headHeight && pos < aboutHeight) {
-        $('#about').addClass('is-visible');
-        $('#about').addClass('fadeIn-scaleUp');
+        $about.addClass('is-visible');
+        $about.addClass('fadeIn-scaleUp');
 
     }
     else{
-    	$('#about').addClass('is-hidden');
-    	$('#about').removeClass('is-visible');
-    	$('#about').removeClass('fadeIn-scaleUp');
+    	$about.addClass('is-hidden');
+    	$about.removeClass('is-visible');
+    	$about.removeClass('fadeIn-scaleUp');
     }
-    console.log(headHeight);
-	console.log(aboutHeight);
+
+    if (pos > contactHeight) {
+    	$contact.addClass('is-visible');
+        $contact.addClass('fadeIn-scaleUp');
+
+    }
+    else{
+    	$contact.addClass('is-hidden');
+    	$contact.removeClass('is-visible');
+    	$contact.removeClass('fadeIn-scaleUp');
+    }
+
 	});
 });
