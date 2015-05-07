@@ -11,8 +11,15 @@
   		@include span-columns(12);
   	}
   	@include media($large-mobile){
-  		height: 300px;
-		max-height: 480px;
+  		height: 400px;
+		border:none;
+	}
+	@include media($medium-mobile){
+  		height: 250px;
+		border:none;
+	}
+	@include media($mobile){
+  		height: 210px;
 		border:none;
 	}
 
@@ -67,6 +74,14 @@
 	z-index: 100;
 	margin-right: -50px;
  	margin-left: 5px;
+	@include media($medium-mobile){
+		margin-top: 265px;
+		background-size: 35px;
+	}
+ 	@include media($mobile){
+  		margin-top: 230px;
+  		background-size: 30px;
+	}
 }
 
 #next{
@@ -80,7 +95,17 @@
 	cursor: pointer;
 	position: relative;
 	z-index: 100;
-	margin-left: -50px;
+	margin-left: -45px;
+	@include media($medium-mobile){
+		margin-top: 265px;
+		background-size: 35px;
+		margin-left: -40px;
+	}
+	@include media($mobile){
+  		margin-top: 230px;
+  		background-size: 30px;
+  		margin-left: -40px;
+	}
 }
 
 #afropunk{

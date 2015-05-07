@@ -317,7 +317,7 @@ body {
   margin-right: auto;
   max-height: 45.625rem;
   padding-top: 6.25rem; }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 375px) {
     #about {
       padding-top: 0; } }
   @media screen and (min-width: 980px) {
@@ -1037,7 +1037,7 @@ a.contact {
     #heading {
       height: auto;
       margin-top: 1rem; } }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 375px) {
     #heading {
       padding-bottom: 8rem; } }
   #heading #logo {
@@ -1154,8 +1154,15 @@ a.contact {
         margin-right: 0; } }
   @media screen and (max-width: 640px) {
     #carousel {
-      height: 300px;
-      max-height: 480px;
+      height: 400px;
+      border: none; } }
+  @media screen and (max-width: 375px) {
+    #carousel {
+      height: 250px;
+      border: none; } }
+  @media screen and (max-width: 320px) {
+    #carousel {
+      height: 210px;
       border: none; } }
 
 #slider {
@@ -1204,6 +1211,14 @@ a.contact {
   z-index: 100;
   margin-right: -50px;
   margin-left: 5px; }
+  @media screen and (max-width: 375px) {
+    #prev {
+      margin-top: 265px;
+      background-size: 35px; } }
+  @media screen and (max-width: 320px) {
+    #prev {
+      margin-top: 230px;
+      background-size: 30px; } }
 
 #next {
   background-image: url(../images/keyboard-arrow-right.svg);
@@ -1216,7 +1231,17 @@ a.contact {
   cursor: pointer;
   position: relative;
   z-index: 100;
-  margin-left: -50px; }
+  margin-left: -45px; }
+  @media screen and (max-width: 375px) {
+    #next {
+      margin-top: 265px;
+      background-size: 35px;
+      margin-left: -40px; } }
+  @media screen and (max-width: 320px) {
+    #next {
+      margin-top: 230px;
+      background-size: 30px;
+      margin-left: -40px; } }
 
 #afropunk {
   max-width: 507px; }
@@ -1261,12 +1286,23 @@ a.contact {
   top: 0;
   left: 0;
   opacity: 0; }
+  @media screen and (max-width: 980px) {
+    .slide-copy {
+      text-align: center;
+      padding-left: 3px;
+      padding-right: 3px; } }
   .slide-copy h1 {
     color: #ffffff;
     font-family: "bebas_neuelight";
     font-size: 3.5rem;
     font-weight: normal;
     margin-bottom: 20px; }
+    @media screen and (max-width: 375px) {
+      .slide-copy h1 {
+        font-size: 2.25rem; } }
+    @media screen and (max-width: 320px) {
+      .slide-copy h1 {
+        font-size: 2rem; } }
   .slide-copy p {
     font-family: "bebas_neuelight";
     color: #e4e4e4;
@@ -1300,7 +1336,7 @@ h3 {
   @media screen and (max-width: 768px) {
     h3 {
       width: 100%; } }
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 375px) {
     h3 {
       width: 80%;
       float: none;
