@@ -475,21 +475,21 @@ body {
 @-webkit-keyframes fadeInScale {
   from {
     opacity: 0;
-    transform: scale(0.5); }
+    transform: scale(0.7); }
   to {
     opacity: 1;
     transform: scale(1); } }
 @-moz-keyframes fadeInScale {
   from {
     opacity: 0;
-    transform: scale(0.5); }
+    transform: scale(0.7); }
   to {
     opacity: 1;
     transform: scale(1); } }
 @keyframes fadeInScale {
   from {
     opacity: 0;
-    transform: scale(0.5); }
+    transform: scale(0.7); }
   to {
     opacity: 1;
     transform: scale(1); } }
@@ -585,21 +585,21 @@ body {
 @-webkit-keyframes fadeInScale {
   from {
     opacity: 0;
-    transform: scale(0.5); }
+    transform: scale(0.7); }
   to {
     opacity: 1;
     transform: scale(1); } }
 @-moz-keyframes fadeInScale {
   from {
     opacity: 0;
-    transform: scale(0.5); }
+    transform: scale(0.7); }
   to {
     opacity: 1;
     transform: scale(1); } }
 @keyframes fadeInScale {
   from {
     opacity: 0;
-    transform: scale(0.5); }
+    transform: scale(0.7); }
   to {
     opacity: 1;
     transform: scale(1); } }
@@ -616,10 +616,7 @@ body {
 .spin {
   -webkit-animation: spin 7s linear;
   -moz-animation: spin 7s linear;
-  animation: spin 7s linear;
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  animation-delay: 1s; }
+  animation: spin 7s linear; }
 
 .fade-in {
   -webkit-animation: fadeIn 2s linear;
@@ -633,9 +630,9 @@ body {
   animation-fill-mode: forwards; }
 
 .fadeIn-scaleUp {
-  -webkit-animation: fadeInScale 1s linear;
-  -moz-animation: fadeInScale 1s linear;
-  animation: fadeInScale 1s linear; }
+  -webkit-animation: fadeInScale 1.5s linear;
+  -moz-animation: fadeInScale 1.5s linear;
+  animation: fadeInScale 1.5s linear; }
 
 @font-face {
   font-family: 'bebas_neuethin';
@@ -867,21 +864,21 @@ a.contact {
 @-webkit-keyframes fadeInScale {
   from {
     opacity: 0;
-    transform: scale(0.5); }
+    transform: scale(0.7); }
   to {
     opacity: 1;
     transform: scale(1); } }
 @-moz-keyframes fadeInScale {
   from {
     opacity: 0;
-    transform: scale(0.5); }
+    transform: scale(0.7); }
   to {
     opacity: 1;
     transform: scale(1); } }
 @keyframes fadeInScale {
   from {
     opacity: 0;
-    transform: scale(0.5); }
+    transform: scale(0.7); }
   to {
     opacity: 1;
     transform: scale(1); } }
@@ -977,21 +974,21 @@ a.contact {
 @-webkit-keyframes fadeInScale {
   from {
     opacity: 0;
-    transform: scale(0.5); }
+    transform: scale(0.7); }
   to {
     opacity: 1;
     transform: scale(1); } }
 @-moz-keyframes fadeInScale {
   from {
     opacity: 0;
-    transform: scale(0.5); }
+    transform: scale(0.7); }
   to {
     opacity: 1;
     transform: scale(1); } }
 @keyframes fadeInScale {
   from {
     opacity: 0;
-    transform: scale(0.5); }
+    transform: scale(0.7); }
   to {
     opacity: 1;
     transform: scale(1); } }
@@ -1008,10 +1005,7 @@ a.contact {
 .spin {
   -webkit-animation: spin 7s linear;
   -moz-animation: spin 7s linear;
-  animation: spin 7s linear;
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  animation-delay: 1s; }
+  animation: spin 7s linear; }
 
 .fade-in {
   -webkit-animation: fadeIn 2s linear;
@@ -1025,9 +1019,9 @@ a.contact {
   animation-fill-mode: forwards; }
 
 .fadeIn-scaleUp {
-  -webkit-animation: fadeInScale 1s linear;
-  -moz-animation: fadeInScale 1s linear;
-  animation: fadeInScale 1s linear; }
+  -webkit-animation: fadeInScale 1.5s linear;
+  -moz-animation: fadeInScale 1.5s linear;
+  animation: fadeInScale 1.5s linear; }
 
 #heading {
   background-image: url("../images/logo-bg.svg");
@@ -1071,7 +1065,15 @@ a.contact {
 
 .arrow {
   margin-top: 30px;
-  cursor: pointer; }
+  cursor: pointer;
+  opacity: 0; }
+
+#contact .arrow {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg); }
 
 #about h1, #contact h1 {
   font-family: "bebas_neuebold";
@@ -1150,6 +1152,11 @@ a.contact {
       width: 100%; }
       #carousel:last-child {
         margin-right: 0; } }
+  @media screen and (max-width: 640px) {
+    #carousel {
+      height: 300px;
+      max-height: 480px;
+      border: none; } }
 
 #slider {
   width: 100%;
@@ -1158,6 +1165,9 @@ a.contact {
   overflow: hidden;
   float: left;
   padding: 3px; }
+  @media screen and (max-width: 640px) {
+    #slider {
+      max-height: 480px; } }
   @media screen and (min-width: 980px) {
     #slider {
       height: 480px; } }

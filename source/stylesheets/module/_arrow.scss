@@ -1,4 +1,8 @@
 .arrow{
 	margin-top: 30px;
 	cursor: pointer;
+	opacity:0;
+}
+#contact .arrow{
+	@include transform(rotate(180deg));
 }

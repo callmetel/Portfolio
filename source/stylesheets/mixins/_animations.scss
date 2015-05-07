@@ -8,7 +8,6 @@
 
 .spin{
 	@include animation(spin 7s linear);
-	@include animation-delay(1s);
 }
 
 .fade-in{
@@ -18,5 +17,5 @@
 }
 
 .fadeIn-scaleUp{
-	@include animation(fadeInScale 1s linear);
+	@include animation(fadeInScale 1.5s linear);
 }

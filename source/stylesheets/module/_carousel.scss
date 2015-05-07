@@ -10,6 +10,12 @@
   	@include media($mtablet-max) {
   		@include span-columns(12);
   	}
+  	@include media($large-mobile){
+  		height: 300px;
+		max-height: 480px;
+		border:none;
+	}
+
 }
 #slider{
 	width:100%;
@@ -18,6 +24,9 @@
 	overflow: hidden;
 	float: left;
 	padding:3px;
+	@include media($large-mobile){
+		max-height: 480px;
+	}
 	@include media($mtablet){
 	height: 480px;	
 	}
