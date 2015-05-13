@@ -15,57 +15,8 @@ $(document).ready(function(){
 		$('.dropdown').slideToggle(600);
 		$('.toggle-dropdown').toggleClass('dropdown-active');
 	});
+	
 
-// Carousel Functionality
-
-	var autoswitch = true;		//autoslide option
-	var autoswitch_speed =8000; //auto slide speed 
-
-	$('.slide').first().addClass('is-active');
-	$('.slide-copy').first().addClass('is-active');
-	$('.slide-copy').addClass('is-inactive');
-
-	$('#next').on('click', nextSlide);
-
-	$('#prev').on('click', prevSlide);
-
-	if(autoswitch === true){
-		setInterval(nextSlide, autoswitch_speed)
-	}
-
-	function nextSlide(){
-
-		var $active = $('.is-active');
-		var	$firstSlide = $('.slide').first();
-		var $firstSlideCopy = $('.slide-copy').first();
-
-
-		if ($active.is(':last-child')) {
-			$active.removeClass('is-active'); 
-			$firstSlide.addClass('is-active');
-			$firstSlideCopy.addClass('is-active');
-		}
-		else{
-			$active.removeClass('is-active').next().addClass('is-active');
-		}
-	}
-
-	function prevSlide(){
-
-		var $active = $('.is-active'),
-			$lastSlide = $('.slide').last(),
-			$lastSlideCopy = $('.slide-copy').last();
-
-			if ($active.is(':first-child')){
-				$active.removeClass('is-active');
-				$lastSlide.addClass('is-active'); 
-				$lastSlideCopy.addClass('is-active');
-
-			}
-			else{
-				$active.removeClass('is-active').prev().addClass('is-active');
-			}  
-	}
 
 // Home Page Fade On Scroll Anmiation
 	
@@ -122,7 +73,7 @@ $(document).ready(function(){
   }));
 });
 
-// Draw SVG Animation
+	// Draw SVG Animation
 
 var $twitter = $('#tw'),
 	$drawTwitter = $('.drawTw'),
@@ -133,46 +84,6 @@ var $twitter = $('#tw'),
 	$mail = $('#ml'),
 	$drawMail = $('.drawMl'),
 	$arrow = $('.drawThis');
-
-
-
-	  // Draw Logo
-	  TweenMax.from('.grow', 5, {drawSVG:0, rotation: 560, delay:0.8});
-
-	  // Draw Arrow
- 	  $arrow.mouseover(function (e){    
-          TweenMax.from($(this), 1, {drawSVG:0});
-      });
-      $arrow.mouseout(function (e){    
-          TweenMax.to($(this), 1, {drawSVG:100});
-      });
-
-      // Draw Icons
-      $twitter.mouseover(function (e){    
-          TweenMax.to($drawTwitter, 1, {drawSVG:0});
-      });
-      $twitter.mouseout(function (e){    
-          TweenMax.to($drawTwitter, 1, {drawSVG:130});
-      });
-      $facebook.mouseover(function (e){    
-          TweenMax.to($drawFacebook, 1, {drawSVG:0});
-      });
-      $facebook.mouseout(function (e){    
-          TweenMax.to($drawFacebook, 1, {drawSVG:100});
-      });
-      $youtube.mouseover(function (e){    
-          TweenMax.to($drawYoutube, 1, {drawSVG:0});
-      });
-      $youtube.mouseout(function (e){    
-          TweenMax.to($drawYoutube, 1, {drawSVG:100});
-      });
-      $mail.mouseover(function (e){    
-          TweenMax.to($drawMail, 1, {drawSVG:0});
-      });
-      $mail.mouseout(function (e){    
-          TweenMax.to($drawMail, 1, {drawSVG:130});
-      });
-
 
 
 });
